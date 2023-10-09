@@ -30,6 +30,7 @@ function mergeImages() {
         for (let j = 0; j < COLS; j++) {
             let image = new Image();
             image.src = images[i][j];
+            image.style = "width: 100%; height: 100%; object-fit: cover;";
 
             image.onload = () => {
                 ctx.drawImage(image, i * 500, j * 500, 500, 500);
